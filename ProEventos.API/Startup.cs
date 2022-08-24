@@ -10,7 +10,8 @@ using ProEventos.Application.Queries;
 using ProEventos.Persistence;
 using ProEventos.Persistence.IQueries;
 using ProEventos.Persistence.Queries;
-
+using AutoMapper;
+using System;
 
 namespace ProEventos.API
 {
@@ -37,6 +38,7 @@ namespace ProEventos.API
                     .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling =
                           Newtonsoft.Json.ReferenceLoopHandling.Ignore
                     );
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.API", Version = "v1" });

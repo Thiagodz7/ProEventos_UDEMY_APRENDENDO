@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ProEventos.Domain
+namespace ProEventos.Application.DTOs
 {
-    public class Lote
+    public class LoteDto
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -11,7 +11,6 @@ namespace ProEventos.Domain
         public DateTime? DtFim { get; set; }
         public int Quantidade { get; set; }
         public int EventoId { get; set; }
-        public Evento Eventos { get; set; }
-
+        public EventoDto Eventos { get; set; }
     }
 }
